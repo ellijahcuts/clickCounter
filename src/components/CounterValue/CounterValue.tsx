@@ -6,14 +6,16 @@ type CounterValuesType = {
     value: number
     Plus: () => void
     Reset: () => void
+
 }
+
 
 export const CounterValue = (props: CounterValuesType) => {
     return (
         <div className={s.block}>
             <Counter value={props.value}/>
             <div className={s.border}>
-                <div className={s.buttonINC} onClick={props.Plus}>INCREASE</div>
+                <button disabled={props.value === 5} className={s.buttonINC} onClick={props.Plus}>INCREASE</button>
                 <div className={s.buttonRES} onClick={props.Reset}>RESET</div>
             </div>
         </div>

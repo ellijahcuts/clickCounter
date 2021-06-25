@@ -8,6 +8,7 @@ import {CounterSetting} from "./components/CounterSettings/CounterSetting";
 export function App() {
 
     const [value, setValue] = useState<number>(0)
+
     let Plus = () => {
         if (value < 5)
             setValue(value + 1)

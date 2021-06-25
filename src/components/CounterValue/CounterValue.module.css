@@ -60,6 +60,26 @@
     color: #C0C0C0;
 }
 
+.buttonINC:disabled {
+    position: fixed;
+    width: 230px;
+    height: 75px;
+    left: 100px;
+    top: 352px;
+    background: #ffffff;
+    border: 5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 62px;
+    text-align: center;
+    color: #d4cfcf;
+}
+
 .buttonRES {
     position: fixed;
     width: 230px;
