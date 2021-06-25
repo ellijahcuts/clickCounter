@@ -1,0 +1,121 @@
+.block{
+    position: absolute;
+    width: 720px;
+    height: 500px;
+    left: 165px;
+    top: calc(50% - 500px/2 - 47.5px);
+
+    border: 10px solid #2C75FF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 120px;
+}
+
+.frame{
+    position: fixed;
+    width: 599px;
+    height: 250px;
+    left: 60px;
+    top: 41px;
+
+    border: 15px solid #2C75FF;
+    box-sizing: border-box;
+    border-radius: 45px;
+}
+.maxValue{
+    position: fixed;
+    width: 270px;
+    height: 75px;
+    left: 330px;
+    top: 85px;
+
+    background: #A52A2A;
+    border: 5px solid #2C75FF;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    color: #C0C0C0;
+}
+.startValue{
+    position: fixed;
+    width: 270px;
+    height: 75px;
+    left: 330px;
+    top: 170px;
+
+    background: #A52A2A;
+    border: 5px solid #2C75FF;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    color: #C0C0C0;
+}
+.buttonFrame{
+    position: fixed;
+    width: 599px;
+    height: 144px;
+    left: 60px;
+    top: 318px;
+
+    border: 7px solid #2C75FF;
+    box-sizing: border-box;
+    border-radius: 60px;
+}
+.buttonSet{
+    position: fixed;
+    width: 167px;
+    height: 75px;
+    left: 276px;
+    top: 352px;
+
+    background: #A52A2A;
+    border: 5px solid #2C75FF;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: #C0C0C0;
+}
+.labelStart{
+    position: fixed;
+    width: 153px;
+    height: 57px;
+    left: 142px;
+    top: 188px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+
+    color: #C0C0C0;
+}
+.labelMax{
+    position: fixed;
+    width: 153px;
+    height: 57px;
+    left: 149px;
+    top: 103px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+
+    color: #C0C0C0;
+}
