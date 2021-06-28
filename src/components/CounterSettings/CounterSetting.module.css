@@ -140,3 +140,39 @@
     text-align: center;
     color: rgb(255, 0, 0);
 }
+.maxValueError{
+    position: fixed;
+    width: 270px;
+    height: 75px;
+    left: 330px;
+    top: 85px;
+
+    background: rgb(241, 108, 108);
+    border: 5px solid #ff0000;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    color: #090808;
+}
+.startValueError{
+    position: fixed;
+    width: 270px;
+    height: 75px;
+    left: 330px;
+    top: 170px;
+
+    background: rgb(241, 108, 108);
+    border: 5px solid #ff0000;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    color: #090808;
+}

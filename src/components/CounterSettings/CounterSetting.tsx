@@ -15,12 +15,14 @@ export const CounterSetting = (props:SettingsType) => {
         <div className={s.block} >
             <div className={s.frame}>
                 <label className={s.labelMax}>Max Value:
-                    <input type={"number"} className={s.maxValue}
+                    <input type={"number"}
+                           className={props.maxValue<0 || props.maxValue===props.startValue ? s.maxValueError : s.maxValue}
                            value={props.maxValue} onChange={props.changeMax}
 
                     /></label>
                 <label className={s.labelStart}>Start Value:
-                    <input type={"number"} className={s.startValue}
+                    <input type={"number"}
+                           className={props.startValue<0 || props.startValue===props.maxValue ? s.startValueError: s.startValue }
                            value={props.startValue} onChange={props.changeStart}
 
                     /></label>

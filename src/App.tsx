@@ -13,13 +13,13 @@ export function App() {
     const [changes, setChanges] = useState<boolean>(false)
 
 
-    useEffect(() => {
-        let valueAsString = localStorage.getItem('counterValue')
-        if (valueAsString) {
-            let newValue = JSON.parse(valueAsString)
-            setValueCounter(newValue)
-        }
-    }, [])
+    // useEffect(() => {
+    //     let valueAsString = localStorage.getItem('counterValue')
+    //     if (valueAsString) {
+    //         let newValue = JSON.parse(valueAsString)
+    //         setValueCounter(newValue)
+    //     }
+    // }, [])
     useEffect(() => {
         let maxValueString = localStorage.getItem('maxValueSetting')
         if (maxValueString) {
@@ -35,16 +35,15 @@ export function App() {
         }
     }, [])
 
-
-    useEffect(() => {
-        localStorage.setItem('counterValue', JSON.stringify(valueCounter))
-    }, [valueCounter])
     useEffect(() => {
         localStorage.setItem('maxValueSetting', JSON.stringify(maxValueSetting))
     }, [maxValueSetting])
     useEffect(() => {
         localStorage.setItem('startValueSetting', JSON.stringify(startValueSetting))
     }, [startValueSetting])
+    // useEffect(() => {
+    //     localStorage.setItem('counterValue', JSON.stringify(valueCounter))
+    // }, [valueCounter])
 
 
     let Plus = () => {
