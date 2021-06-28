@@ -120,3 +120,23 @@
 
     color: #C0C0C0;
 }
+.buttonSet:disabled {
+    position: fixed;
+    width: 167px;
+    height: 75px;
+    left: 276px;
+    top: 352px;
+
+    background: rgba(255, 0, 0, 0);
+    border: 5px solid #ff0000;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+}

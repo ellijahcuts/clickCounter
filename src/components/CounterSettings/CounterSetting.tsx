@@ -26,7 +26,11 @@ export const CounterSetting = (props:SettingsType) => {
                     /></label>
             </div>
             <div className={s.buttonFrame}>
-                <div className={s.buttonSet} onClick={props.set}>SET</div>
+                <button disabled={props.startValue < 0
+                || props.maxValue <= 0
+                || props.startValue === props.maxValue
+                || props.startValue > props.maxValue
+                } className={s.buttonSet} onClick={props.set}>SET</button>
             </div>
         </div>
     );
