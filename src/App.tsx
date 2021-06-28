@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import  s from './App.module.css';
+import React, {ChangeEvent, useEffect, useState} from 'react';
+import s from './App.module.css';
 import {CounterValue} from "./components/CounterValue/CounterValue";
 import {CounterSetting} from "./components/CounterSettings/CounterSetting";
 
@@ -7,24 +7,83 @@ import {CounterSetting} from "./components/CounterSettings/CounterSetting";
 
 export function App() {
 
-    const [value, setValue] = useState<number>(0)
+    const [valueCounter, setValueCounter] = useState<number>(0)
+    const [maxValueCounter, setMaxValueCounter] = useState<number>(0)
+    const [maxValueSetting, setMaxValueSetting] = useState<number>(0)
+    const [startValueSetting, setStartValueSetting] = useState<number>(0)
+
+
+    useEffect(() => {
+        let valueAsString = localStorage.getItem('counterValue')
+        if (valueAsString) {
+            let newValue = JSON.parse(valueAsString)
+            setValueCounter(newValue)
+        }
+    }, [])
+    useEffect(() => {
+        let maxValueString = localStorage.getItem('maxValueSetting')
+        if (maxValueString) {
+            let newMaxValue = JSON.parse(maxValueString)
+            setMaxValueSetting(newMaxValue)
+        }
+    }, [])
+    useEffect(() => {
+        let startValueString = localStorage.getItem('startValueSetting')
+        if (startValueString) {
+            let newStartValue = JSON.parse(startValueString)
+            setStartValueSetting(newStartValue)
+        }
+    }, [])
+
+
+    useEffect(() => {
+        localStorage.setItem('counterValue', JSON.stringify(valueCounter))
+    }, [valueCounter])
+    useEffect(() => {
+        localStorage.setItem('maxValueSetting', JSON.stringify(maxValueSetting))
+    }, [maxValueSetting])
+    useEffect(() => {
+        localStorage.setItem('startValueSetting', JSON.stringify(startValueSetting))
+    }, [startValueSetting])
+
 
     let Plus = () => {
-        if (value < 5)
-            setValue(value + 1)
+        if (valueCounter < maxValueCounter)
+            setValueCounter(valueCounter + 1)
     }
     let Reset = () => {
-        setValue(0)
+        setValueCounter(0)
     }
+    const changeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
+        setMaxValueSetting(JSON.parse(e.currentTarget.value));
+    };
+    const changeStartValue = (e: ChangeEvent<HTMLInputElement>) => {
+        setStartValueSetting(JSON.parse(e.currentTarget.value));
+    };
+    let Set = () => {
+        if (startValueSetting >= 0 && maxValueSetting > 0){
+            setMaxValueCounter(maxValueSetting)
+            setValueCounter(startValueSetting)
+        }
+        }
+
+
 
     return (
         <div className={s.Core}>
             <CounterValue
-                value={value}
+                value={valueCounter}
+                maxValue={maxValueCounter}
                 Plus={Plus}
                 Reset={Reset}
             />
-            <CounterSetting/>
+            <CounterSetting
+                maxValue={maxValueSetting}
+                startValue={startValueSetting}
+                changeMax={changeMaxValue}
+                changeStart={changeStartValue}
+                set={Set}
+            />
         </div>
     )
 
