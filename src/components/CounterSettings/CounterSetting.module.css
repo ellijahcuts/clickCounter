@@ -69,26 +69,6 @@
     box-sizing: border-box;
     border-radius: 60px;
 }
-.buttonSet{
-    position: fixed;
-    width: 167px;
-    height: 75px;
-    left: 276px;
-    top: 352px;
-
-    background: rgb(56, 56, 56);
-    border: 5px solid #C0C0C0;
-    box-sizing: border-box;
-    border-radius: 15px;
-
-    font-family: Georgia, serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 62px;
-    text-align: center;
-    color: #C0C0C0;
-}
 .labelStart{
     position: fixed;
     width: 153px;
@@ -119,26 +99,6 @@
     line-height: 30px;
 
     color: #C0C0C0;
-}
-.buttonSet:disabled {
-    position: fixed;
-    width: 167px;
-    height: 75px;
-    left: 276px;
-    top: 352px;
-
-    background: rgba(255, 0, 0, 0);
-    border: 5px solid #ff0000;
-    box-sizing: border-box;
-    border-radius: 15px;
-
-    font-family: Georgia, serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 62px;
-    text-align: center;
-    color: rgb(255, 0, 0);
 }
 .maxValueError{
     position: fixed;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import s from './CounterValue.module.css';
+import {Button} from "../Button/Button";
 
 type CounterValuesType = {
     value: number
@@ -8,6 +9,7 @@ type CounterValuesType = {
     Plus: () => void
     Reset: () => void
     Changes: boolean
+    startValue:number
 
 }
 
@@ -20,10 +22,8 @@ export const CounterValue = (props: CounterValuesType) => {
                 : <div className={props.value === props.maxValue ? s.counterError : s.counter}>{props.value}</div>
             }
             <div className={s.border}>
-                <button disabled={props.value === props.maxValue} className={s.buttonINC}
-                        onClick={props.Plus}>INCREASE
-                </button>
-                <div className={s.buttonRES} onClick={props.Reset}>RESET</div>
+                <Button title={"INCREASE"} onClick={props.Plus} disabled={props.value === props.maxValue}/>
+                <Button title={"RESET"} onClick={props.Reset} disabled={props.value === props.startValue}/>
             </div>
         </div>
     );

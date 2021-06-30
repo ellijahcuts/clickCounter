@@ -56,6 +56,12 @@ export function App() {
             setValueCounter(JSON.parse(getStartValue))
         }
     }
+    let SetReset = ()=>{
+        if(startValueSetting > 0 && maxValueSetting > 0){
+         setStartValueSetting(0)
+         setMaxValueSetting(0)
+        }
+    }
     const changeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         setMaxValueSetting(JSON.parse(e.currentTarget.value));
         setChanges(true)
@@ -77,6 +83,7 @@ export function App() {
             <CounterValue
                 value={valueCounter}
                 maxValue={maxValueCounter}
+                startValue={startValueSetting}
                 Plus={Plus}
                 Reset={Reset}
                 Changes={changes}
@@ -86,7 +93,8 @@ export function App() {
                 startValue={startValueSetting}
                 changeMax={changeMaxValue}
                 changeStart={changeStartValue}
-                set={Set}
+                Set={Set}
+                setReset={SetReset}
             />
         </div>
     )

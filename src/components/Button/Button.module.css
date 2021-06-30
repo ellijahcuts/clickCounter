@@ -1,0 +1,36 @@
+.button{
+    margin-left: 25px;
+    margin-top: 5%;
+    width: 250px;
+    height: 75px;
+    background: rgb(56, 56, 56);
+    border: 5px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: #C0C0C0;
+}
+.button:disabled {
+    margin-left: 25px;
+    margin-top: 5%;
+    width: 250px;
+    height: 75px;
+    background: rgba(255, 0, 0, 0);
+    border: 5px solid #ff0000;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 62px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
